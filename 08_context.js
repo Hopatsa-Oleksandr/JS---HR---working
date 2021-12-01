@@ -50,3 +50,13 @@ const animal = {
 };
 
 animal.logThis();
+
+//=================стрелочные фу-ции => ============================
+
+function Cat(color) {
+  this.color = color;
+  console.log("This", this);
+  (() => console.log("Arrow this", this))();
+}
+
+new Cat("White");
