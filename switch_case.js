@@ -100,4 +100,94 @@ for (let i = 0; i < fruits.length; i++) {
   console.log(fruits[i]);
 }
 
-// продолжение1.59
+// .forEach() - поиск всех заголовков, всех кнопок, всех дивов, найти их скрыть обойти что то сделать..
+
+const fruits = [
+  "Яблоко",
+  "Груша",
+  "Слива",
+  "Апельсин",
+  "Яблоко1",
+  "Груша2",
+  "Слива3",
+  "Апельсин4",
+  "Яблоко11",
+  "Груша22",
+  "Слива33",
+  "Апельсин44",
+];
+
+fruits.forEach(function (item, i) {
+  console.log(`Элемент с индексом = ${i} = ${item}`);
+  console.log(`Элемент с индексом = ${item} = ${i}`);
+  console.log(`Элемент ${item}`);
+});
+
+//========Функции=====================================
+
+let greeting1 = `Привет Алексей! Как дела?`;
+console.log(greeting1);
+
+let greeting2 = `Привет Alex! Как дела?`;
+console.log(greeting2);
+
+let greeting3 = `Привет Djon! Как дела?`;
+console.log(greeting3);
+
+function greeting(name) {
+  console.log(`Привет ${name}! Как дела?`);
+}
+
+greeting(Алексей);
+greeting(Alex);
+greeting(Djon);
+
+//==========Function вычесление==============================================
+
+function calculateSum(x, y) {
+  let result = x + y;
+  console.log(result);
+}
+
+calculateSum(5, 10);
+
+function calculateSum(x, y) {
+  let result = x + y;
+  console.log(result);
+  return result;
+}
+
+let answer = calculateSum(5, 10);
+console.log(answer);
+
+function calculateSum(x, y) {
+  let result = x + y;
+  return result;
+}
+
+// let res = calculateSum(calculateSum(10, 20), calculateSum(30, 40));
+// console.log(res);
+//или вот так
+
+console.log(calculateSum(calculateSum(10, 20), calculateSum(30, 40)));
+
+//====Function Declartion======================
+//можем вызывать до того, как они обявлены
+calculateSum(20, 15);
+
+function calculateSum(x, y) {
+  let result = x + y;
+  console.log(result);
+  return result;
+}
+
+//====Function Expression======================
+
+let calculateSum = function (x, y) {
+  let result = x + y;
+  console.log(result);
+  return result;
+};
+//такие ф-ции можем вызывать только после того как они обявлены.hide
+
+calculateSum(10, 20);
